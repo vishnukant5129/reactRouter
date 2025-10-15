@@ -1,44 +1,57 @@
 import { Link } from "react-router-dom";
+
 export default function Home() {
-    return (
-        <div className="mx-auto w-full max-w-7xl">
-            <aside className="relative overflow-hidden text-black rounded-lg sm:mx-16 mx-2 sm:py-16">
-                <div className="relative z-10 max-w-screen-xl px-4  pb-20 pt-10 sm:py-24 mx-auto sm:px-6 lg:px-8 ">
-                    <div className="max-w-xl sm:mt-1 mt-80 space-y-8 text-center sm:text-right sm:ml-auto ">
-                        <h2 className="text-4xl font-bold sm:text-5xl">
-                            Download Now
-                            <span className="hidden sm:block text-4xl">Lorem Ipsum</span>
-                        </h2>
+  return (
+    <div className="w-full min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 flex flex-col items-center">
 
-                        <Link
-                            className="inline-flex text-white items-center px-6 py-3 font-medium bg-orange-700 rounded-lg hover:opacity-75"
-                            to="/"
-                        >
-                            <svg
-                                fill="white"
-                                width="24"
-                                height="24"
-                                xmlns="http://www.w3.org/2000/svg"
-                                fillRule="evenodd"
-                                clipRule="evenodd"
-                            >
-                                <path d="M1.571 23.664l10.531-10.501 3.712 3.701-12.519 6.941c-.476.264-1.059.26-1.532-.011l-.192-.13zm9.469-11.56l-10.04 10.011v-20.022l10.04 10.011zm6.274-4.137l4.905 2.719c.482.268.781.77.781 1.314s-.299 1.046-.781 1.314l-5.039 2.793-4.015-4.003 4.149-4.137zm-15.854-7.534c.09-.087.191-.163.303-.227.473-.271 1.056-.275 1.532-.011l12.653 7.015-3.846 3.835-10.642-10.612z" />
-                            </svg>
-                            &nbsp; Download now
-                        </Link>
-                    </div>
-                </div>
+      {/* Hero Section */}
+      <section className="relative w-full max-w-7xl px-4 sm:px-6 lg:px-12 py-16 flex flex-col lg:flex-row items-center lg:justify-between gap-12">
+        
+        {/* Left Content */}
+        <div className="lg:w-1/2 space-y-6 text-center lg:text-left">
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900">
+            Explore the World
+            <span className="block text-indigo-600 mt-2">with Lorem Ipsum Yojo</span>
+          </h1>
+          <p className="text-gray-700 text-lg sm:text-xl leading-relaxed">
+            Discover amazing places, plan your trips, and experience the adventure like never before.
+          </p>
 
-                <div className="absolute inset-0 w-full sm:my-20 sm:pt-1 pt-12 h-full ">
-                    <img className="w-96" src="https://static.vecteezy.com/system/resources/previews/035/629/434/original/world-tourism-day-png.png" alt="image1" />
-                </div>
-            </aside>
-
-            <div className="grid  place-items-center sm:mt-20">
-                <img className="sm:w-96 w-48" src="https://static.vecteezy.com/system/resources/previews/035/629/460/original/world-tourism-day-png.png" alt="image2" />
-            </div>
-
-            <h1 className="text-center text-2xl sm:text-5xl py-10 font-medium">Lorem Ipsum Yojo</h1>
+          <div className="flex justify-center lg:justify-start gap-4 mt-6">
+            <Link
+              to="/"
+              className="px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow-lg hover:bg-indigo-700 transform hover:scale-105 transition duration-300"
+            >
+              Download App
+            </Link>
+            <Link
+              to="/"
+              className="px-6 py-3 border-2 border-indigo-600 text-indigo-600 font-semibold rounded-lg hover:bg-indigo-50 transform hover:scale-105 transition duration-300"
+            >
+              Learn More
+            </Link>
+          </div>
         </div>
-    );
+
+        {/* Right Image */}
+        <div className="lg:w-1/2 relative">
+          <div className="rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-500">
+            <img
+              src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+              alt="Travel Hero"
+              className="w-full lg:h-[500px] object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Secondary Section */}
+      <section className="w-full max-w-7xl px-4 sm:px-6 lg:px-12 mt-12 text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">Why Choose Us?</h2>
+        <p className="text-gray-600 text-lg sm:text-xl max-w-3xl mx-auto">
+          We provide curated travel guides, exclusive tips, and tools to make your journeys effortless and memorable.
+        </p>
+      </section>
+    </div>
+  );
 }
